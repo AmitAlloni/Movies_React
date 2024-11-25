@@ -43,7 +43,7 @@ body {
 .homepage-hero {
     background-size: cover;
     background-position: center;
-    padding: 50px 20px;
+    padding: 100px 20px;
     text-align: center;
 
 }
@@ -51,13 +51,13 @@ body {
 .homepage-hero h2 {
     font-size: 36px;
     font-weight: bold;
-    margin: 0;
-    color: #ffffff;
+    margin-bottom: 20px;
+    color: #ff4b5c;
 }
 
 /* Movie Rows */
 .homepage-movies {
-    margin: 50px 20px 0 20px;
+    margin: 0 20px 0 20px;
 }
 
 .homepage-movies h2 {
@@ -99,5 +99,12 @@ body {
 .filter-button:hover {
     background-color: #ff4b5c;
     color: white;
+}
+
+.empty-message {
+    text-align: center;
+    font-size: 20px;
+    color: #ffffff;
+    margin: 20px 0;
 }
 

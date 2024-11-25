@@ -89,6 +89,14 @@ const HomePage = () => {
             <div className="homepage-movies">
                 {loading ? (
                     <p>Loading...</p>
+                ) : displayedMovies.length === 0 ? (
+                    <p className="empty-message">
+                        {filter === 'popular'
+                            ? 'No popular movies found.'
+                            : filter === 'playing_now'
+                                ? 'No movies are playing now.'
+                                : 'Your favorites list is empty.'}
+                    </p>
                 ) : (
                     movieChunks.map((row, rowIndex) => (
                         <div className="movies-row" key={rowIndex} data-row={rowIndex}>
