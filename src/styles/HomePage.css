@@ -1,0 +1,103 @@
+/* General */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #141414;
+    color: #ffffff;
+}
+
+/* Header */
+.homepage-header {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    background-color: #141414;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.homepage-logo {
+    font-size: 24px;
+    color: red;
+    font-weight: bold;
+}
+
+.homepage-header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.homepage-header nav ul li {
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.homepage-header nav ul li:hover {
+    color: #b3b3b3;
+}
+
+/* Hero Section */
+.homepage-hero {
+    background-size: cover;
+    background-position: center;
+    padding: 50px 20px;
+    text-align: center;
+
+}
+
+.homepage-hero h2 {
+    font-size: 36px;
+    font-weight: bold;
+    margin: 0;
+    color: #ffffff;
+}
+
+/* Movie Rows */
+.homepage-movies {
+    margin: 50px 20px 0 20px;
+}
+
+.homepage-movies h2 {
+    margin-bottom: 10px;
+}
+
+.movies-row {
+    display: flex;
+    padding: 10px 0;
+    gap: 20px; /* Space between cards */
+}
+
+.filter-buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.filter-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.filter-button {
+    padding: 10px 20px;
+    border: 2px solid #ff4b5c;
+    border-radius: 5px;
+    background-color: transparent;
+    color: #ff4b5c;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.filter-button.active,
+.filter-button:hover {
+    background-color: #ff4b5c;
+    color: white;
+}
+
