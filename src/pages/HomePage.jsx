@@ -12,19 +12,21 @@ const chunkMovies = (movies = [], size) => {
     return chunks;
 };
 
+
 const HomePage = () => {
     const dispatch = useDispatch();
     const { popular, playingNow, favorites, loading } = useSelector((state) => state.movies);
 
     const [filter, setFilter] = useState('popular');
     const [displayedMovies, setDisplayedMovies] = useState([]);
+    const API_KEY = process.env.REACT_APP_TMDB_API_KEY;
 
     useEffect(() => {
         if (filter === 'popular') {
-            const API_ENDPOINT_FOR_POPULAR = `https://api.themoviedb.org/3/movie/popular?api_key=7adaa73c93375a0b6ec87c74a4accc36&page=1`;
+            const API_ENDPOINT_FOR_POPULAR = `https://api.themoviedb.org/3/movie/popular?api_key=${API_KEY}&page=1`;
             dispatch(fetchMoviesStart({ category: 'popular', url: API_ENDPOINT_FOR_POPULAR }));
         } else if (filter === 'playing_now') {
-            const API_ENDPOINT_FOR_PLAYING_NOW = `https://api.themoviedb.org/3/movie/now_playing?api_key=7adaa73c93375a0b6ec87c74a4accc36&page=1`;
+            const API_ENDPOINT_FOR_PLAYING_NOW = `https://api.themoviedb.org/3/movie/now_playing?api_key=${API_KEY}&page=1`;
             dispatch(fetchMoviesStart({ category: 'playingNow', url: API_ENDPOINT_FOR_PLAYING_NOW }));
         } else if (filter === 'favorites') {
             setDisplayedMovies(favorites);
